@@ -10,7 +10,7 @@ def find_and_replace(lst, find_val, replace_val):
     return [replace_val if item == find_val else item for item in lst] #loop through the list and replace all occurrence of find_val with replace_val
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 4: #verify total number of arguments (including the script name) not more than 4 arguments
         print("Usage: ./q2.py <list> <find_val> <replace_val> | example: python q2.py [1,2,3,4,5] 4 99")
         sys.exit(1)
 

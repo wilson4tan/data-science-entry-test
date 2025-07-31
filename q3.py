@@ -17,18 +17,18 @@ def update_dictionary(dct, key, value):
     return dct
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 4: #verify total number of arguments (including the script name) not more than 4 arguments
         print("Usage: ./q3.py <dictionary> <key> <value> | example: python q3.py \"{'apple':123}\" apple 26") 
         sys.exit(1)
     try:
-        dct = ast.literal_eval(sys.argv[1])
-        key = sys.argv[2]
+        dct = ast.literal_eval(sys.argv[1]) #assign variable to 'dct'
+        key = sys.argv[2] #assign variable to 'key'
         # Try to parse value as int or float, else use as string
         try:
-            value = int(sys.argv[3])
+            value = int(sys.argv[3]) #assign variable to 'key' if it's integer
         except ValueError:
             try:
-                value = float(sys.argv[3])
+                value = float(sys.argv[3]) #assign variable to 'key' if it's float
             except ValueError:
                 value = sys.argv[3]
     except Exception as e:
@@ -36,4 +36,4 @@ if __name__ == "__main__":
         sys.exit(1)
 
     result = update_dictionary(dct, key, value)
-    print(result)
+    print(result)#print final result

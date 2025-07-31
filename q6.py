@@ -16,7 +16,7 @@ def find_first_negative(lst):
     return "No negatives"
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
+    if len(sys.argv) != 2: #verify total number of arguments (including the script name) not more than 2 arguments
         print("Usage: ./q6.py <list> | example: python q6.py [1,2,3,6,7,7,7,-99]")
         sys.exit(1)
     
@@ -24,7 +24,7 @@ if __name__ == "__main__":
         lst = ast.literal_eval(sys.argv[1])
         if not isinstance(lst, list): #ensure the input should be a list
             raise ValueError("Input must be a list.")
-        print(find_first_negative(lst))
+        print(find_first_negative(lst)) #print final result
     except Exception as e:
         print("Invalid input:", e)
         sys.exit(1)

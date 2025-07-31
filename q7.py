@@ -14,17 +14,16 @@ class Car:
         self.year = year
 
     def describe_car(self):
-        print('Make: %s, Model: %s, Year: %s' % (self.make, self.model, self.year))
+        print('Make: %s, Model: %s, Year: %s' % (self.make, self.model, self.year)) #print final result
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 4: #verify total number of arguments (including the script name) not more than 4 arguments
         print("Usage: ./q7.py <make> <model> <year> | example: python q7.py toyota ABC123 2025")
         sys.exit(1)
-
-    make = sys.argv[1]
-    model = sys.argv[2]
+    make = sys.argv[1] #assign variable to 'make'
+    model = sys.argv[2] #assign variable to 'model'
     try:
-        year = int(sys.argv[3]) #ensure the year is integer
+        year = int(sys.argv[3]) #ensure the year is integer and assign variable to 'year' if no issue
     except ValueError:
         print("Year must be an integer.") #return error if year not integer
         sys.exit(1)
